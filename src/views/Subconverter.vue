@@ -1010,7 +1010,15 @@ export default {
       }
     },
     tanchuang() {
-    // 空方法，不执行任何操作
+      this.$alert(`<div style="text-align:center;font-size:15px">
+        <strong>
+          <span style="font-size:20px;color:red">singbox 天下第一</span>
+        </strong></br>
+       </div>`, '信息面板', {
+        confirmButtonText: '确定',
+        dangerouslyUseHTMLString: true,
+        customClass: 'msgbox'
+      });
     }
 
     },
