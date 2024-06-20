@@ -175,7 +175,7 @@
                               </div>
                             </el-col>
                           </el-row>
-                          <el-button slot="reference">更多选项|建议选中·跳过证书验证</el-button>
+                          <el-button slot="reference">更多选项，建议·跳过证书验证</el-button>
                         </el-popover>
                       </el-row>
                     </el-form-item>
@@ -475,6 +475,7 @@ export default {
         },
         customBackend: {
           "增强型后端【vless reality+hy1+hy2】": "https://url.v1.mk",
+          "推荐后端【vless reality+hy1+hy2】": "https://api.ytools.cc",
           "备用后端【vless reality+hy1+hy2】": "https://sub.d1.mk",
           "つつ-多地防失联【负载均衡+国内优化】": "https://api.tsutsu.one",
           nameless13提供: "https://www.nameless13.com",
