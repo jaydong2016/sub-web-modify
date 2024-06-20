@@ -12,7 +12,7 @@
             <svg-icon class="youguan" icon-class="youtube" style="float:right;margin-left:10px" @click="gotoYouTuBe"/>
             <svg-icon class="channel" icon-class="telegram" style="float:right;margin-left: 10px"
                       @click="gotoTgChannel"/>
-            <div style="text-align:center;font-size:15px">订 阅 转 换</div>
+            <div style="text-align:center;font-size:15px">Sub.sbai.us.kg 订阅转换</div>
           </div>
           <el-container>
             <el-form :model="form" label-width="80px" label-position="left" style="width: 100%">
@@ -83,7 +83,7 @@
                             type="limr"
                             style="width: 100%;"
                             icon="el-icon-more-outline"
-                        >点击显示/隐藏
+                        >点击显示/隐藏+++
                         </el-button>
                       </el-form-item>
                     </template>
@@ -175,7 +175,7 @@
                               </div>
                             </el-col>
                           </el-row>
-                          <el-button slot="reference">更多选项</el-button>
+                          <el-button slot="reference">更多选项|建议选中·跳过证书验证</el-button>
                         </el-popover>
                       </el-row>
                     </el-form-item>
@@ -474,8 +474,8 @@ export default {
           "sub.cm": "https://sub.cm/short",
         },
         customBackend: {
-          "肥羊增强型后端【vless reality+hy1+hy2】": "https://url.v1.mk",
-          "肥羊备用后端【vless reality+hy1+hy2】": "https://sub.d1.mk",
+          "增强型后端【vless reality+hy1+hy2】": "https://url.v1.mk",
+          "备用后端【vless reality+hy1+hy2】": "https://sub.d1.mk",
           "つつ-多地防失联【负载均衡+国内优化】": "https://api.tsutsu.one",
           nameless13提供: "https://www.nameless13.com",
           subconverter作者提供: "https://sub.xeton.dev",
@@ -1411,7 +1411,7 @@ export default {
             a ? this.$message.success(`${this.backendVersion}` + "肥羊负载均衡增强版后端，已屏蔽免费节点池（会返回403），额外支持vless reality+hysteria+hysteria2订阅转换") : b ? this.$message.success(`${this.backendVersion}` + "本地局域网自建版后端") : this.$message.success(`${this.backendVersion}` + "官方原版后端不支持vless/hysteria订阅转换");
           })
           .catch(() => {
-            this.$message.error("请求SubConverter版本号返回数据失败，该后端不可用！");
+            this.$message.error("singbox·天下第一！");
           });
     }
   }
