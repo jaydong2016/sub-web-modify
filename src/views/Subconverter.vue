@@ -485,6 +485,7 @@ export default {
         },
         backendOptions: [
           {value: "https://url.v1.mk"},
+          {value: "https://api.ytools.cc"},
           {value: "https://sub.d1.mk"},
           {value: "https://api.tsutsu.one"},
           {value: "https://www.nameless13.com"},
