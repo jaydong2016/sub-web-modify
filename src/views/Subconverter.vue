@@ -12,7 +12,7 @@
             <svg-icon class="youguan" icon-class="youtube" style="float:right;margin-left:10px" @click="gotoYouTuBe"/>
             <svg-icon class="channel" icon-class="telegram" style="float:right;margin-left: 10px"
                       @click="gotoTgChannel"/>
-            <div style="text-align:center;font-size:15px">Sub.sbai.us.kg 订阅转换</div>
+            <div style="text-align:center;font-size:15px">订阅转换·已支持·singbox</div>
           </div>
           <el-container>
             <el-form :model="form" label-width="80px" label-position="left" style="width: 100%">
@@ -475,7 +475,7 @@ export default {
         },
         customBackend: {
           "增强型后端【vless reality+hy1+hy2】": "https://url.v1.mk",
-          "推荐后端【vless reality+hy1+hy2】": "https://api.ytools.cc",
+          "FFQ后端【vless reality+hy1+hy2】": "https://api.ytools.cc",
           "备用后端【vless reality+hy1+hy2】": "https://sub.d1.mk",
           "つつ-多地防失联【负载均衡+国内优化】": "https://api.tsutsu.one",
           nameless13提供: "https://www.nameless13.com",
@@ -1401,19 +1401,23 @@ export default {
     },
     getBackendVersion() {
       this.$axios
-          .get(
-              this.form.customBackend + "/version"
-          )
-          .then(res => {
-            this.backendVersion = res.data.replace(/backend\n$/gm, "");
-            this.backendVersion = this.backendVersion.replace("subconverter", "SubConverter");
-            let a = this.form.customBackend.indexOf("url.v1.mk") !== -1 || this.form.customBackend.indexOf("sub.d1.mk") !== -1;
-            let b = this.form.customBackend.indexOf("127.0.0.1") !== -1;
-            a ? this.$message.success(`${this.backendVersion}` + "肥羊负载均衡增强版后端，已屏蔽免费节点池（会返回403），额外支持vless reality+hysteria+hysteria2订阅转换") : b ? this.$message.success(`${this.backendVersion}` + "本地局域网自建版后端") : this.$message.success(`${this.backendVersion}` + "官方原版后端不支持vless/hysteria订阅转换");
-          })
-          .catch(() => {
-            this.$message.error("singbox·天下第一！");
-          });
+        .get(
+          this.form.customBackend + "/version"
+        )
+        .then(res => {
+          this.backendVersion = res.data.replace(/backend\n$/gm, "");
+          this.backendVersion = this.backendVersion.replace("subconverter", "SubConverter");
+          let a = this.form.customBackend.indexOf("url.v1.mk") !== -1 || 
+                  this.form.customBackend.indexOf("sub.d1.mk") !== -1 || 
+                  this.form.customBackend.indexOf("api.ytools.cc") !== -1; // 新增的 URL 检查
+          let b = this.form.customBackend.indexOf("127.0.0.1") !== -1;
+          a ? this.$message.success(`${this.backendVersion}` + "增强版后端，额外支持vless reality+hysteria+hysteria2订阅转换") : 
+          b ? this.$message.success(`${this.backendVersion}` + "本地局域网自建版后端") : 
+          this.$message.success(`${this.backendVersion}` + "官方原版后端不支持vless/hysteria订阅转换");
+        })
+        .catch(() => {
+          this.$message.error(" ");
+        });
     }
   }
 };
